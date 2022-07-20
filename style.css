@@ -1,0 +1,344 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Splash&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+/*-----------------------CONTENINER---------------------------*/
+.container-fluid{
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 1fr 1fr;
+    grid-template-rows: 0.5fr 4fr 4fr 4fr 1.5fr;
+    grid-template-areas: 
+    "nav nav nav nav"
+    "aside aside main main"
+    "aside aside main main"
+    "aside aside main main"
+    "footer footer footer footer";
+    height: 100vh;
+}
+.container{
+    font-size: 1.5rem;
+}
+.container .navbar-brand{
+    font-size: 2rem;
+}
+/*---------------------------MENU--------------------------*/
+.nav-link:hover{
+background: #606062 ;
+transition: 0.5s;
+}
+nav{
+    grid-area: nav;
+}
+/*------------------------------ASIDE------------------------------*/
+aside{
+    grid-area: aside;
+    max-width: 1900px;
+    background: #232526; 
+    background: -webkit-linear-gradient(to left, #414345, #232526);
+    background: linear-gradient(to left, #414345, #232526); 
+}
+aside .imagen{
+    width: 85%;
+    height: 75vh;
+    margin-top: 15px;
+    margin-left: 25px;
+    border-radius: 5%;
+}
+.imagen{
+    -webkit-animation-name: imnagen;
+    animation-name: imagen;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes imagen {
+    0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+    }
+    50% {
+    opacity: 1;
+    }
+    }
+    @keyframes imagen {
+    0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+    }
+    50% {
+    opacity: 1;
+    }
+}
+
+.contenido{
+    text-align: center;
+}
+.contenido__li{
+    list-style: none;
+    color: aliceblue;
+    font-family: 'Kanit', sans-serif;
+    font-size: 2.3rem;
+    height: 70px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+/*-----------------------------------MAIN------------------------------*/
+main{
+    grid-area: main;
+    max-width: 1900px;
+    height: 80vh;
+    background: #232526; 
+    background: -webkit-linear-gradient(to right, #414345, #232526);
+    background: linear-gradient(to right, #414345, #232526); 
+
+}
+.foto__fondo figure a img{
+    display: block;
+    width: 100%;
+    height:80vh;
+}
+.contenido__li{
+    -webkit-animation-name: contenido__li;
+    animation-name: contenido__li;
+    -webkit-animation-duration: 2.5s;
+    animation-duration: 2.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes contenido__li {
+    0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+    }
+    50% {
+    opacity: 1;
+    }
+}
+.conten{
+    margin-top: 15px;
+    margin-left: 25px;
+}
+.conten__titulo{
+    font-size: 3rem;
+    padding: 10px;
+    color: aliceblue;
+}
+.conten__titulo {
+    animation-name: intro;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    }
+    
+    @keyframes intro {
+    from {
+    transform: translateY(-50vh);
+    opacity: 0;
+    }
+    to {
+    transform: translateY(0);
+    opacity: 1;
+    }
+}
+.conten__texto{
+    font-size: 2rem;
+    color: aliceblue;
+}
+.firma{
+    color: aliceblue;
+    font-size: 2rem;
+    font-family: 'Splash', cursive;
+    margin-top: 44px;
+    margin-left: 600px;
+}
+.oficio{
+    color: aliceblue;
+    font-size: 1.5rem;
+    margin-left: 590px;
+    line-height: 1px;
+}
+
+/*----------------------FOOTER----------------------------*/
+.pie-pagina{
+    grid-area: footer;
+    width: 100%;
+    background: #000000; 
+    background: -webkit-linear-gradient(to button, #434343, #000000);  
+    background: linear-gradient(to top, #434343, #000000); 
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1900px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:80px;
+    padding: 10px 10px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 90%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: -15px;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+}
+.pie-pagina .grupo-1 .box h2{
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 20px;
+    position: relative;
+    left: 75px;
+    bottom: -30px;
+}
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    position: relative;
+    bottom: -45px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 35px;
+    height: 35px;
+    line-height: 30px;
+    left: 75px;
+    color: #fff;
+    margin-right: 15px;
+    background-color:#393839 ;
+    text-align: center;
+    transition: all 300ms ease;
+    position: relative;
+    bottom: -15px;
+}
+.pie-pagina .grupo-1 .red-social a :hover{
+    background-color: #efefef;
+}
+.pie-pagina .grupo-2{
+    background: #232526;  
+    background: -webkit-linear-gradient(to right, #414345, #232526);  
+    background: linear-gradient(to right, #414345, #232526); 
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 12px;
+}
+/*------------------------MEDIA QUERIES---------------------------------*/
+@media screen and (max-width:640px){
+    .pie-pagina .grupo-1{
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 20px 0px;
+    }
+    .pie-pagina .grupo-1 .box figure img{
+        width: 300px;
+        align-items: center;
+    }
+    .pie-pagina .grupo-1 .box p{
+        color: #efefef;
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        position: relative;
+        text-align: center;
+        bottom: 25px;
+    }
+    .pie-pagina .grupo-1 .box h2{
+        color: #fff;
+        margin-bottom: 30px;
+        font-size: 20px;
+        position: relative;
+        text-align: center;
+        left: 2px;
+        bottom: 30px;
+    }
+    .pie-pagina .grupo-1 .red-social a{
+        display: inline-block;
+        text-decoration: none;
+        width: 35px;
+        height: 35px;
+        line-height: 30px;
+        left: 100px;
+        color: #fff;
+        margin-right: 15px;
+        background-color:#393839 ;
+        text-align: center;
+        transition: all 300ms ease;
+        position: relative;
+        left: 180px;
+        bottom: 15px;
+    }
+    .contenido__li{
+        list-style: none;
+        color: aliceblue;
+        font-family: 'Kanit', sans-serif;
+        font-size: 2.3rem;
+        height: 40px;
+        margin-top: 15px;
+    }
+    aside main{
+        display: grid;
+        grid-template-columns: 3;
+        grid-template-rows: 2;
+        grid-template-areas: 
+        "nav nav"
+        "aside aside"
+        "main main";
+    }
+    aside{
+        grid-area: aside;
+        grid-column: 1/5;
+        grid-row: 2;
+        width: 100%;
+    }
+    main{
+        grid-area: main;
+        grid-column: 1/5;
+        grid-row: 3;
+    }
+    .conten{
+        margin: 10px 10px 10px;
+    }
+    .conten__titulo{
+        font-size: 3rem;
+        padding: 10px;
+        color: aliceblue;
+    }
+    .conten__texto{
+        font-size: 2rem;
+        color: aliceblue;
+        text-align: justify;
+    }
+    .firma{
+        color: aliceblue;
+        font-size: 2rem;
+        font-family: 'Splash', cursive;
+        margin-top: 44px;
+        margin-left: 300px;
+    }
+    .oficio{
+        color: aliceblue;
+        font-size: 1.5rem;
+        margin-left: 290px;
+        line-height: 1px;
+    }
+}
